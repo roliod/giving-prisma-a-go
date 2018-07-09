@@ -1,0 +1,11 @@
+type Query {
+  posts(searchString: String): [Post!]!
+  user(name: String!): User
+}
+
+type Mutation {
+  createDraft(authorId: ID!, title: String!, content: String!): Post
+  publish(id: ID!): Post
+  signup(name: String!): User!
+  likePost(like: Int!, postID: ID!): Likes
+}
