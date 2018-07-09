@@ -1,0 +1,20 @@
+type User {
+  id: ID! @unique
+  name: String!
+  posts: [Post!]!
+}
+
+type Post {
+  id: ID! @unique
+  title: String!
+  content: String!
+  published: Boolean! @default(value: "false")
+  author: User!,
+  likes: [Likes!]!
+}
+
+type Likes {
+  id: ID! @unique
+  like: Int!
+  post: Post!
+}
