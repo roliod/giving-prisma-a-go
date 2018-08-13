@@ -2,6 +2,9 @@
   "name": "first",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
   "repository": "https://github.com/roliod/giving-prisma-a-go",
   "author": "roliod <rolandoduberu@gmail.com>",
   "license": "MIT",

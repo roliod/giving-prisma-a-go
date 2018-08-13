@@ -81,14 +81,14 @@ const resolvers = {
       )
     },
     likePost: (_, args, context, info) => {
-      return context.prisma.query.likePost(
+      return context.prisma.query.createLikes(
         {
           data: {
             like: args.like,
-          },
-          post: {
-            connect: {
-              id: args.postID,
+            post: {
+              connect: {
+                id: args.postID,
+              },
             },
           },
         },
